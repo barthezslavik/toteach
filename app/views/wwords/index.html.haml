@@ -1,0 +1,10 @@
+%h1 Категории слов
+%br/
+%table.zebra-striped
+  %tbody
+    - @wthemes.each do |wtheme|
+      %tr
+        %td
+          = link_to wtheme.name, "/words/#{wtheme.id}"
+%br/
+= link_to "Главная", "/", :class => 'btn success'

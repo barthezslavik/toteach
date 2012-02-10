@@ -1,0 +1,14 @@
+.row
+  .span7{:style=>"float:left;"}
+    = form_for @wcourse, :url => wcourses_path, :html => { :class => :form } do |f|
+      = render :partial => "form", :locals => {:f => f}
+
+  .span1{:style=>"float:left"}
+    %table.zebra-striped
+      %tbody
+        /- @wcourses.each do |wcourse|
+        /  %tr
+        /    %td= link_to wcourse.name, edit_wcourse_path(wcourse)
+        /    %td &nbsp;&nbsp;&nbsp;
+        /    %td
+

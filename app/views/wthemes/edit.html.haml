@@ -1,0 +1,3 @@
+= form_for @wtheme, :url => wtheme_path(@wtheme), :html => { :class => "edit_wtheme", :id => "edit_wtheme" } do |f|
+  %input{:name => "_method", :type => "hidden", :value => "put"}/
+  = render :partial => "form", :locals => {:f => f}

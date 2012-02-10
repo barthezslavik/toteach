@@ -1,0 +1,2 @@
+module WthemesHelper
+end

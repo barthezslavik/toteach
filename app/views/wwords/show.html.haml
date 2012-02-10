@@ -1,0 +1,20 @@
+%label.label
+  = t("activerecord.attributes.wword.course_id", :default => t("activerecord.labels.course_id", :default => "Course"))
+  \:
+%p= @wword.course_id
+%label.label
+  = t("activerecord.attributes.wword.theme_id", :default => t("activerecord.labels.theme_id", :default => "Theme"))
+  \:
+%p= @wword.theme_id
+%label.label
+  = t("activerecord.attributes.wword.word", :default => t("activerecord.labels.word", :default => "Word"))
+  \:
+%p= @wword.word
+%label.label
+  = t("activerecord.attributes.wword.translate", :default => t("activerecord.labels.translate", :default => "Translate"))
+  \:
+%p= @wword.translate
+.actions
+  = link_to "Back", wwords_path, :class => 'btn primary'
+  = link_to "Edit", edit_wword_path(@wword), :class => 'btn primary'
+  = link_to "Delete", wword_path(@wword), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn primary'

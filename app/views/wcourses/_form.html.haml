@@ -1,0 +1,24 @@
+.clearfix
+  = f.label :name, "Название", :class => "label"
+  .input
+    = f.text_field :name, :class => 'text_field'
+.clearfix
+  = f.label :description, "Описание", :class => "label"
+  .input
+    = f.text_area :description, :class => 'text_field', :size => "10x5"
+.clearfix
+  = f.label :imgsrc, "Изображение", :class => "label"
+  .input
+    = f.text_field :imgsrc, :class => 'text_field'
+    /= image_tag "http://toteach.com.ua/vimgs/#{image}", :size => "48x48" if controller.action_name != "new"
+.clearfix
+  = f.label :queue,"Очередь", :class => "label"
+  .input
+    = f.number_field :queue, :class => 'number_field'
+.clearfix
+  = f.label :active, "Активность", :class => "label"
+  .input
+    = f.number_field :active, :class => 'number_field'
+.actions
+  %button.btn.primary{:type => "submit"} Сохранить
+  = link_to "Отмена", wcourses_path, :class=> "btn"

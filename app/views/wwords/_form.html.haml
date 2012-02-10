@@ -1,0 +1,19 @@
+.clearfix
+  = f.label :course_id, "Курс", :class => :label
+  .input
+    = f.select :course_id, Wcourse.all.collect{ |c| [c.name, c.id] }, :selected => params[:course] 
+.clearfix
+  = f.label :theme_id, "Тема", :class => :label
+  .input
+    = f.select :theme_id, Wtheme.all.collect{ |c| [c.name, c.id] }, :selected => params[:theme] 
+.clearfix
+  = f.label :word, "Слово", :class => :label
+  .input
+    = f.text_field :word, :class => 'text_field'
+.clearfix
+  = f.label :translate, "Перевод", :class => :label
+  .input
+    = f.text_field :translate, :class => 'text_field'
+.actions
+  %button.btn.primary{:type => "submit"} Сохранить
+  = link_to "Отменить", "/words/#{params[:theme]}", :class => "btn"

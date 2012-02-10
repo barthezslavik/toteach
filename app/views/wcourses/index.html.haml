@@ -1,0 +1,13 @@
+%h1 Курсы
+%br/
+%table.zebra-striped
+  %tbody
+    - @wcourses.each do |wcourse|
+      %tr
+        %td= link_to wcourse.name, edit_wcourse_path(wcourse)
+        %td &nbsp;&nbsp;&nbsp;
+        %td
+          = link_to "Удалить", wcourse_path(wcourse), :class=> "btn danger", :method => :delete, :confirm => "Вы уверенны?"
+%br/
+= link_to "Создать", new_wcourse_path, :class => 'btn primary'
+= link_to "Главная", "/", :class => 'btn success'

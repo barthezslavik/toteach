@@ -1,0 +1,19 @@
+.clearfix
+  = f.label :course_id, "Курс", :class => :label
+  .input
+    = f.select :course_id, Wcourse.all.collect{ |c| [c.name, c.id] }
+.clearfix
+  = f.label :name, "Название", :class => :label
+  .input
+    = f.text_field :name, :class => 'text_field'
+.clearfix
+  = f.label :description, "Описание", :class => :label
+  .input
+    = f.text_area :description, :class => 'text_field', :size => "10x5"
+.clearfix
+  = f.label :ico, t("activerecord.attributes.wtheme.ico", :default => "Ico"), :class => :label
+  .input
+    = f.text_field :ico, :class => 'text_field'
+.actions
+  %button.btn.primary{:type => "submit"} Сохранить
+  = link_to "Отмена", wthemes_path, :class => "btn"

@@ -1,0 +1,24 @@
+%label.label
+  = t("activerecord.attributes.wcourse.name", :default => t("activerecord.labels.name", :default => "Name"))
+  \:
+%p= @wcourse.name
+%label.label
+  = t("activerecord.attributes.wcourse.description", :default => t("activerecord.labels.description", :default => "Description"))
+  \:
+%p= @wcourse.description
+%label.label
+  = t("activerecord.attributes.wcourse.imgsrc", :default => t("activerecord.labels.imgsrc", :default => "Imgsrc"))
+  \:
+%p= @wcourse.imgsrc
+%label.label
+  = t("activerecord.attributes.wcourse.queue", :default => t("activerecord.labels.queue", :default => "Queue"))
+  \:
+%p= @wcourse.queue
+%label.label
+  = t("activerecord.attributes.wcourse.active", :default => t("activerecord.labels.active", :default => "Active"))
+  \:
+%p= @wcourse.active
+.actions
+  = link_to "Back", wcourses_path, :class => 'btn primary'
+  = link_to "Edit", edit_wcourse_path(@wcourse), :class => 'btn primary'
+  = link_to "Delete", wcourse_path(@wcourse), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn primary'

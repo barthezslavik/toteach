@@ -1,0 +1,20 @@
+%label.label
+  = t("activerecord.attributes.wtheme.courseid", :default => t("activerecord.labels.courseid", :default => "Courseid"))
+  \:
+%p= @wtheme.course_id
+%label.label
+  = t("activerecord.attributes.wtheme.name", :default => t("activerecord.labels.name", :default => "Name"))
+  \:
+%p= @wtheme.name
+%label.label
+  = t("activerecord.attributes.wtheme.description", :default => t("activerecord.labels.description", :default => "Description"))
+  \:
+%p= @wtheme.description
+%label.label
+  = t("activerecord.attributes.wtheme.ico", :default => t("activerecord.labels.ico", :default => "Ico"))
+  \:
+%p= @wtheme.ico
+.actions
+  = link_to "Back", wthemes_path, :class => 'btn primary'
+  = link_to "Edit", edit_wtheme_path(@wtheme), :class => 'btn primary'
+  = link_to "Delete", wtheme_path(@wtheme), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn primary'
