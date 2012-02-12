@@ -5,11 +5,11 @@
     - @wwords.each do |wword|
       %tr
         %td
-          = link_to wword.word, edit_wword_path(wword)
+          = link_to wword.word, "/wwords/#{wword.id}/edit?course=#{wword.course_id}&theme=#{wword.theme_id}"
         %td
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         %td
-          = link_to wword.translate, edit_wword_path(wword)
+          = link_to wword.translate, "/wwords/#{wword.id}/edit?course=#{wword.course_id}&theme=#{wword.theme_id}"
         %td
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         %td

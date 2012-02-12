@@ -14,6 +14,9 @@
         = link_to wtheme.name, edit_wtheme_path(wtheme)
       %td &nbsp;&nbsp;&nbsp;
       %td
+        = link_to "Слова", "/words/#{wtheme.id}", :class => 'btn success'
+      %td &nbsp;&nbsp;&nbsp;
+      %td
         = link_to "Удалить", wtheme_path(wtheme), :class=> "btn danger", :method => :delete, :confirm => "Вы уверенны?"
 %br/
 = link_to "Создать", new_wtheme_path, :class => 'btn primary'
