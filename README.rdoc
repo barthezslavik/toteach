@@ -3,17 +3,25 @@
 1. Установить rvm
 
 <tt>bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)</tt>
+
 <tt>source ~/.bash_profile</tt>
+
 <tt>rvm install 1.9.3</tt>
+
 <tt>rvm use 1.9.3 -- default</tt>
 
 2. Настроить проект
 
 <tt>git clone https://barthezslavik@github.com/barthezslavik/toteach.git</tt>
+
 <tt>cd toteach</tt>
+
 <tt>bundle</tt>
+
 Написать на barthez.slavik@gmail.com чтобы получить config/database.yml
 
 3. Запуск
+
 <tt>rails s</tt>
+
 link:http://localhost:3000
